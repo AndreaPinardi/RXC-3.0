@@ -1,7 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Step from "./step/index"
 import Button from './components/common/Button';
+import Checkbox from './components/common/Checkbox';
+import TextInput from './components/common/TextInput';
 
 const getConfig = async (fn) => {
   const steps = ["step1", "step2", "step3"]
@@ -26,6 +29,7 @@ export default function Home({config = null, rxcBrain = null}) {
   const next = () => setCurrentStepIndex((index) => index === steps.length - 1 ? index : index + 1)
   const back = () => setCurrentStepIndex((index) => index === 0 ? index : index - 1)
   
+  
   return (
     <Router>
       <div>
@@ -34,7 +38,6 @@ export default function Home({config = null, rxcBrain = null}) {
           <Button onClick={next} variant='secondary'>Next</Button>
           <Button variant='inverted'>add insurance</Button>
         </nav>
-       
         <Routes>
           <Route path="*" element={<Step currentStep={currentStep}/>}/>
         </Routes>
