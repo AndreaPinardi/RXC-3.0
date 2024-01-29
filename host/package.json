@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
+    "build:local": "webpack --mode production --env mode=production",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8080 npx serve",
     "start": "webpack serve --open --mode development",
+    "start:default": "webpack serve --open --hot --mode development --env brand=default --env mode=development",
+    "start:opsm": "webpack serve --open --hot --mode development --env brand=opsm --env mode=development",
+    "start:osi": "webpack serve --open --hot --mode development --env brand=osi --env mode=development",
+    "start:rayban": "webpack serve --open --hot --mode development --env brand=rayban --env mode=development",
+    "start:glasses": "webpack serve --open --hot --mode development --env brand=glasses --env mode=development",
+    "start:clearly": "webpack serve --open --hot --mode development --env brand=clearly --env mode=development",
+    "start:costa": "webpack serve --open --hot --mode development --env brand=costa --env mode=development",
+    "start:oakley": "webpack serve --open --hot --mode development --env brand=oakley --env mode=development",
+    "start:sgh": "webpack serve --open --hot --mode development --env brand=sgh --env mode=development",
+    "start:arnette": "webpack serve --open --hot --mode development --env brand=arnette --env mode=development",
+    "start:targetoptical": "webpack serve --open --hot --mode development --env brand=targetoptical --env mode=development",
+    "start:davidclulow": "webpack serve --open --hot --mode development --env brand=davidclulow --env mode=development",
+    "start:persol": "webpack serve --open --hot --mode development --env brand=persol --env mode=development",
+    "start:oliverpeoples": "webpack serve --open --hot --mode development --env brand=oliverpeoples --env mode=development",
+    "start:framesdirect": "webpack serve --open --hot --mode development --env brand=framesdirect --env mode=development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
   "devDependencies": {
@@ -28,7 +44,14 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.3.1",
     "dotenv-webpack": "^8.0.1",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "copy-webpack-plugin": "^8.1.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "source-map-loader": "^4.0.1"
   },
   "dependencies": {
     "react": "^18.2.0",
