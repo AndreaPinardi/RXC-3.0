@@ -4,16 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--base---primary)',
-        secondary: 'var(--light---primary)',
+        primary: "var(--color--primary)",
+        secondary: "var(--color--secondary)",
       },
       fontFamily: {
-        primary: 'var(--font--primary)'
-      }
+        primary: "var(--font--primary)",
+        secondary: "var(--font--secondary)",
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

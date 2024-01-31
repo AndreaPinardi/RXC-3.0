@@ -6,6 +6,7 @@ import Checkbox from "./components/common/Checkbox";
 import TextInput from "./components/common/TextInput";
 import { Text } from "./components/common/Text";
 import Card from "./components/layout/Card";
+import DoubleSelect from "./components/common/DoubleSelect";
 
 const getConfig = async (fn) => {
   const steps = ["step1", "step2", "step3"];
@@ -64,10 +65,18 @@ export default function Home({ config = null, rxcBrain = null }) {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo ac
                 nunc amet sed at vitae enim.
               </Text>
+              <div className="flex gap-4">
+                <Button variant="secondary" size="small" disabled>
+                  chip
+                </Button>
+                <Button variant="secondary" size="small" disabled>
+                  chip
+                </Button>
+              </div>
             </div>
           </Card>
         </div>
-
+        <DoubleSelect />
         <Routes>
           <Route path="*" element={<Step currentStep={currentStep} />} />
         </Routes>
