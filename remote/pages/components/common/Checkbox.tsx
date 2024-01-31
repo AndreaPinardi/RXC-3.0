@@ -14,7 +14,7 @@ const checkboxContainerVariants = cva("items-center", {
   },
 });
 
-const labelVariants = cva("ml-2", {
+const labelVariants = cva("ml-2 font-primary", {
   variants: {
     size: {
       s: "text-sm",
@@ -25,6 +25,10 @@ const labelVariants = cva("ml-2", {
     disabled: {
       true: "text-gray-400",
       false: "text-slate-600",
+    },
+    font: {
+      primary: "font-primary",
+      secondary: "font-secondary",
     },
   },
 });
@@ -74,6 +78,7 @@ export type CheckboxProps = {
   disabled?: boolean;
   width?: "full" | "fit";
   size?: "s" | "m" | "l" | "xl";
+  font?: "primary" | "secondary";
 } & CheckBoxVariantProps;
 
 const Checkbox: FC<CheckboxProps> = ({
@@ -85,6 +90,7 @@ const Checkbox: FC<CheckboxProps> = ({
   disabled,
   width,
   size,
+  font,
 }) => {
   const _id = id || label;
   return (
@@ -97,7 +103,10 @@ const Checkbox: FC<CheckboxProps> = ({
         checked={checked}
         disabled={disabled}
       />
-      <label htmlFor={_id} className={cn(labelVariants({ size, disabled }))}>
+      <label
+        htmlFor={_id}
+        className={cn(labelVariants({ size, disabled, font }))}
+      >
         {label}
       </label>
     </div>

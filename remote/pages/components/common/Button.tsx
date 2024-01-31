@@ -12,6 +12,7 @@ const buttonVariants = cva(
         secondary:
           "text-primary bg-secondary rounded-full border border-primary",
         inverted: "bg-white uppercase text-black border border-primary",
+        link: "text-primary underline",
       },
       size: {
         small: "py-2 px-4",
