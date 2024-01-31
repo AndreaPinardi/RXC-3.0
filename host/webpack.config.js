@@ -12,7 +12,11 @@ module.exports = (_, argv) => ({
   output: {
     // filename: '[name].js',
     // path: path.resolve(__dirname, 'dist'),
-    publicPath: argv.mode === "development" ? "http://localhost:8080/" : "https://react-host-nine.vercel.app/",
+    chunkFilename: "[id].chunk.js",
+    path: path.join(__dirname, "./build"),
+    filename: "rxc.js",
+    libraryTarget: "umd",
+    publicPath: "",
   },
 
   resolve: {
@@ -52,7 +56,7 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        remote: argv.mode === "development" ? "remote@http://localhost:8081/_next/static/chunks/remoteEntry.js" : "remote@https://remote-beige.vercel.app/_next/static/chunks/remoteEntry.js"
+        remote: "remote@http://localhost:8081/_next/static/chunks/remoteEntry.js",
       },
       exposes: {
         

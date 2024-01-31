@@ -1,0 +1,11 @@
+import React, { FC } from "react";
+
+interface RXC_PRESCRIPTION_DETAILS_MODAL_TYPE {
+
+}
+
+const RXC_PRESCRIPTION_DETAILS_MODAL: FC<RXC_PRESCRIPTION_DETAILS_MODAL_TYPE> = (props) => {
+  return <div>RXC_PRESCRIPTION_DETAILS_MODAL</div>;
+};
+
+export default RXC_PRESCRIPTION_DETAILS_MODAL;
