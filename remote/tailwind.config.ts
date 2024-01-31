@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--base---primary)",
-        secondary: "var(--light---primary)",
+        primary: "var(--color--primary)",
+        secondary: "var(--color--secondary)",
       },
       fontFamily: {
         primary: "var(--font--primary)",
