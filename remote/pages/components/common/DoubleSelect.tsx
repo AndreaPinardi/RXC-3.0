@@ -11,6 +11,11 @@ const positive = [
   { id: 3, name: "3" },
   { id: 4, name: "4" },
   { id: 5, name: "5" },
+  { id: 6, name: "6" },
+  { id: 7, name: "7" },
+  { id: 8, name: "8" },
+  { id: 9, name: "9" },
+  { id: 10, name: "10" },
 ];
 
 const negative = [
@@ -19,6 +24,11 @@ const negative = [
   { id: 3, name: "-3" },
   { id: 4, name: "-4" },
   { id: 5, name: "-5" },
+  { id: 6, name: "-6" },
+  { id: 7, name: "-7" },
+  { id: 8, name: "-8" },
+  { id: 9, name: "-9" },
+  { id: 10, name: "-10" },
 ];
 
 const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
@@ -48,7 +58,7 @@ const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
               </div>
             </Listbox.Button>
             {open && (
-              <Listbox.Options className="flex flex-col justify-between border w-full p-1">
+              <Listbox.Options className="flex flex-col justify-between border w-full">
                 <div className="flex-1">
                   <Listbox.Option
                     value={zero}
@@ -57,7 +67,7 @@ const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
                     {zero.name}
                   </Listbox.Option>
                 </div>
-                <div className="flex justify-between w-full p-1">
+                <div className="flex justify-between w-full p-1 max-h-44 overflow-y-scroll">
                   <div className="flex-1">
                     {negative.map((person) => (
                       <Listbox.Option

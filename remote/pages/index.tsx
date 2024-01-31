@@ -49,7 +49,7 @@ export default function Home({ config = null, rxcBrain = null }) {
         <Text as="h1" weight="bold" align="center" size="3xl" className="mb-2">
           Title
         </Text>
-        <Text as="p" weight="normal" align="center" className="mb-2">
+        <Text as="h2" weight="normal" align="center" className="mb-2">
           subtitle
         </Text>
 
