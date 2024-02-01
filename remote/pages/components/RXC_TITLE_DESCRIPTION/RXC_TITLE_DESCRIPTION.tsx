@@ -1,17 +1,28 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
+import Text from "../common/Text";
 
 interface RXC_TITLE_DESCRIPTION_TYPE {
-    title: string;
-    description?: string;
-    accordion?: boolean;
-    textContent?: string[];
-    steps_addOns_label?: string;
+  id: number;
+  order: number;
+  title: string;
+  description?: string;
+  accordion?: boolean;
+  textContent?: string[];
+  steps_addOns_label?: string;
 }
 
 const RXC_TITLE_DESCRIPTION: FC<RXC_TITLE_DESCRIPTION_TYPE> = (props) => {
+  console.log(props);
   return (
-    <div>RXC_TITLE_DESCRIPTION</div>
-  )
-}
+    <div>
+      <Text as="h1" weight="bold" align="center" size="3xl" className="mb-2">
+        {props?.title}
+      </Text>
+      <Text as="p" weight="normal" align="center" className="mb-2">
+        {props?.description}
+      </Text>
+    </div>
+  );
+};
 
-export default RXC_TITLE_DESCRIPTION
+export default RXC_TITLE_DESCRIPTION;

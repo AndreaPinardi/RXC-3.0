@@ -1,39 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Step from "./step/index";
+import React from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
+import Backend from "./backend";
 
-const getConfig = async (fn) => {
-  const steps = ["step1", "step2", "step3"];
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(fn(steps)), 2000);
-  });
-};
+const queryClient = new QueryClient();
 
 export default function Home({ config = null, rxcBrain = null }) {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [steps, setSteps] = useState([]);
-
-  useEffect(() => {
-    getConfig(setSteps);
-  }, []);
-
-  const currentStep = useMemo(() => {
-    if (!steps.length) return "";
-    return steps[currentStepIndex];
-  }, [currentStepIndex, steps]);
-
-  const next = () =>
-    setCurrentStepIndex((index) =>
-      index === steps.length - 1 ? index : index + 1
-    );
-  const back = () =>
-    setCurrentStepIndex((index) => (index === 0 ? index : index - 1));
-
   return (
-    <Router>
-      <Routes>
-        <Route path="*" element={<Step currentStep={currentStep} />} />
-      </Routes>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <Backend config={config} rxcBrain={rxcBrain} />
+      </Provider>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
