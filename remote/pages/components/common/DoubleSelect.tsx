@@ -3,44 +3,44 @@ import { Listbox } from "@headlessui/react";
 
 interface DoubleSelect_TYPE {}
 
-const zero = { id: 1, name: "0" };
+const zero = { id: 1, value: "0", name: "NONE" };
 
 const positive = [
-  { id: 1, name: "1" },
-  { id: 2, name: "2" },
-  { id: 3, name: "3" },
-  { id: 4, name: "4" },
-  { id: 5, name: "5" },
-  { id: 6, name: "6" },
-  { id: 7, name: "7" },
-  { id: 8, name: "8" },
-  { id: 9, name: "9" },
-  { id: 10, name: "10" },
+  { id: 1, value: "1" },
+  { id: 2, value: "2" },
+  { id: 3, value: "3" },
+  { id: 4, value: "4" },
+  { id: 5, value: "5" },
+  { id: 6, value: "6" },
+  { id: 7, value: "7" },
+  { id: 8, value: "8" },
+  { id: 9, value: "9" },
+  { id: 10, value: "10" },
 ];
 
 const negative = [
-  { id: 1, name: "-1" },
-  { id: 2, name: "-2" },
-  { id: 3, name: "-3" },
-  { id: 4, name: "-4" },
-  { id: 5, name: "-5" },
-  { id: 6, name: "-6" },
-  { id: 7, name: "-7" },
-  { id: 8, name: "-8" },
-  { id: 9, name: "-9" },
-  { id: 10, name: "-10" },
+  { id: 1, value: "-1" },
+  { id: 2, value: "-2" },
+  { id: 3, value: "-3" },
+  { id: 4, value: "-4" },
+  { id: 5, value: "-5" },
+  { id: 6, value: "-6" },
+  { id: 7, value: "-7" },
+  { id: 8, value: "-8" },
+  { id: 9, value: "-9" },
+  { id: 10, value: "-10" },
 ];
 
 const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
-  const [selectedPerson, setSelectedPerson] = useState(zero);
+  const [selectedValue, setSelectedValue] = useState(zero);
 
   return (
-    <div className="w-20">
-      <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+    <div className="relative w-full">
+      <Listbox value={selectedValue} onChange={setSelectedValue}>
         {({ open }) => (
           <>
-            <Listbox.Button className="flex items-center justify-between border w-full p-1">
-              <div className="">{selectedPerson.name}</div>
+            <Listbox.Button className="flex items-center justify-between w-full p-2 bg-white">
+              <div className="">{selectedValue.value}</div>
 
               <div className={open ? "transform rotate-180" : ""}>
                 <svg
@@ -58,35 +58,35 @@ const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
               </div>
             </Listbox.Button>
             {open && (
-              <Listbox.Options className="flex flex-col justify-between border w-full">
+              <Listbox.Options className="absolute flex flex-col justify-between border w-full bg-white z-10">
                 <div className="flex-1">
                   <Listbox.Option
                     value={zero}
                     className="flex items-center justify-center cursor-pointer"
                   >
-                    {zero.name}
+                    {zero.value}
                   </Listbox.Option>
                 </div>
-                <div className="flex justify-between w-full p-1 max-h-44 overflow-y-scroll">
+                <div className="flex justify-between w-full p-2 max-h-44 overflow-y-scroll overflow-x-hidden">
                   <div className="flex-1">
-                    {negative.map((person) => (
+                    {negative.map((option) => (
                       <Listbox.Option
-                        key={person.id}
-                        value={person}
+                        key={option.id}
+                        value={option}
                         className="flex items-center justify-center cursor-pointer"
                       >
-                        {person.name}
+                        {option.value}
                       </Listbox.Option>
                     ))}
                   </div>
                   <div className="flex-1">
-                    {positive.map((person) => (
+                    {positive.map((option) => (
                       <Listbox.Option
-                        key={person.id}
-                        value={person}
+                        key={option.id}
+                        value={option}
                         className="flex items-center justify-center cursor-pointer"
                       >
-                        {person.name}
+                        {option.value}
                       </Listbox.Option>
                     ))}
                   </div>
