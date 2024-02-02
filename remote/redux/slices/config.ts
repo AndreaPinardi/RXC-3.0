@@ -1,21 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type ConfigState = {
-  steps?: any[];
-};
+export type ConfigState = {};
 
-const initialState: ConfigState = {
-  steps: null,
-};
+const initialState: ConfigState = {};
 
 const configSlice = createSlice({
   name: "config",
   initialState: initialState,
-  reducers: {
-    setSteps: (state, action: PayloadAction<any[]>) => {
-      state.steps = action.payload;
-    },
-  },
+  reducers: {},
 });
 
 export const configReducer = configSlice.reducer;
