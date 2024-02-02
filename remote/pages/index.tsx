@@ -7,7 +7,7 @@ import Backend from "./backend";
 
 const queryClient = new QueryClient();
 
-export default function Home({ config = null, rxcBrain = null }) {
+export default function Main({ config = null, rxcBrain = null }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
