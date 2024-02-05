@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Text from "../common/Text";
+import Text from "../../common/Text";
 
 interface RXC_TITLE_DESCRIPTION_TYPE {
   id: number;
@@ -12,7 +12,6 @@ interface RXC_TITLE_DESCRIPTION_TYPE {
 }
 
 const RXC_TITLE_DESCRIPTION: FC<RXC_TITLE_DESCRIPTION_TYPE> = (props) => {
-  console.log(props);
   return (
     <div>
       <Text as="h1" weight="bold" align="center" size="3xl" className="mb-2">

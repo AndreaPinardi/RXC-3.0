@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 8081",
-    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build && npm run json-components",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-components": "npx @react-docgen/cli --pretty -o components.json ./pages/components/backoffice/**/*.tsx && node scripts/formatJson.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",

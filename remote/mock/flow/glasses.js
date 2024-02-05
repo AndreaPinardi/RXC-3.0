@@ -56,7 +56,7 @@ export default {
         },
         {
           definingAttributes: {
-            number: "1",
+            number: "2",
             title: "AdvancedPrescription",
             autoproceed: true,
           },

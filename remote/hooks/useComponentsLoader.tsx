@@ -6,7 +6,7 @@ export default function useComponentsLoader(_components) {
   useEffect(() => {
     const importComponent = async (componentId) => {
       const { default: Component } = await import(
-        `@/pages/components/${componentId}/${componentId}`
+        `@/pages/components/backoffice/${componentId}/${componentId}`
       );
       return Component;
     };
