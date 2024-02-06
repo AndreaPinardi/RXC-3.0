@@ -1,17 +1,35 @@
 import React, { FC } from "react";
 
+const DEFAULT_LABELS = {
+  title: "Select your prescription",
+  subtitle:
+    "Choose the preferred prescription and we’ll take care of the rest. \n Can’t find it?",
+  subtitleAdd: "Add a new prescription",
+  prescriptionName: "Prescription name",
+  uploadedOn: "Last updated: ",
+  today: "Today",
+  yesterday: "Yesterday",
+  justUpdated: "Just updated",
+  olderThanYearBanner:
+    "This prescription was uploaded 1 year ago. Please check if it is still valid.",
+  showPrescription: "show prescription",
+};
 interface RXC_USE_SAVED_PRESCRIPTION_TYPE {
-    steps_advancedPrescription_fromMyAccount_title: string;
-    steps_advancedPrescription_fromMyAccount_subtitle: string;
-    steps_advancedPrescription_fromMyAccount_subtitleAdd: string;
-    steps_advancedPrescription_fromMyAccount_prescriptionName: string;
-    steps_advancedPrescription_fromMyAccount_uploadedOn: string;
-    steps_advancedPrescription_fromMyAccount_today: string;
-    steps_advancedPrescription_fromMyAccount_yesterday: string;
-    steps_advancedPrescription_fromMyAccount_justUpdated: string;
+  title: string;
+  subtitle: string;
+  subtitleAdd: string;
+  prescriptionName: string;
+  uploadedOn: string;
+  today: string;
+  yesterday: string;
+  justUpdated: string;
+  olderThanYearBanner: string;
+  showPrescription: string;
 }
 
-const RXC_USE_SAVED_PRESCRIPTION: FC<RXC_USE_SAVED_PRESCRIPTION_TYPE> = (props) => {
+const RXC_USE_SAVED_PRESCRIPTION: FC<RXC_USE_SAVED_PRESCRIPTION_TYPE> = (
+  props
+) => {
   return <div>RXC_USE_SAVED_PRESCRIPTION</div>;
 };
 

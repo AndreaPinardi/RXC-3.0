@@ -1,10 +1,18 @@
 import React, { FC } from "react";
 
-interface RXC_PRESCRIPTION_DETAILS_MODAL_TYPE {
+const DEFAULT_LABELS = {
+  title: "Your prescription details",
+  edit: "Edit prescription",
+};
 
+interface RXC_PRESCRIPTION_DETAILS_MODAL_TYPE {
+  title: string;
+  edit: string;
 }
 
-const RXC_PRESCRIPTION_DETAILS_MODAL: FC<RXC_PRESCRIPTION_DETAILS_MODAL_TYPE> = (props) => {
+const RXC_PRESCRIPTION_DETAILS_MODAL: FC<
+  RXC_PRESCRIPTION_DETAILS_MODAL_TYPE
+> = (props) => {
   return <div>RXC_PRESCRIPTION_DETAILS_MODAL</div>;
 };
 
