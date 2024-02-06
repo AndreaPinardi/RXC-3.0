@@ -7,7 +7,7 @@ function Layout({ data }) {
 
   return (
     <div className="flex">
-      <div className="left flex-1 min-h-screen hidden lg:block">
+      <div className="left flex-1 min-h-screen hidden lg:block bg-lightGray">
         {leftComponents}
       </div>
       <div className="right flex-1 flex flex-col min-h-screen">

@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         primary: "var(--color--primary)",
         secondary: "var(--color--secondary)",
+        lightGray: "var(--Base-Gray-Ultra-light)",
+        mediumGray: "var(--Base-Gray-Medium)",
       },
       fontFamily: {
         primary: "var(--font--primary)",
