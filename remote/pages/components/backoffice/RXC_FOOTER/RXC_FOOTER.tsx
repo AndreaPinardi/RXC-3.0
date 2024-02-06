@@ -13,6 +13,7 @@ interface RXC_FOOTER_TYPE {
   insuranceLabelRemove: string;
   price_totalFrameLens_frame: string;
   price_totalFrameLens_frameLensTotal: string;
+  showAddToBag?: boolean;
 }
 
 const RXC_FOOTER: FC<RXC_FOOTER_TYPE> = (props) => {

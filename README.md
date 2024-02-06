@@ -13,4 +13,12 @@ remote localhost:8081
 // generate JSON schema of components for BO
 
 cd remote
-npx @react-docgen/cli --pretty -o components.json ./pages/components/\*_/_.tsx
+npm run json-components
+
+// tailwind docs
+
+https://v2.tailwindcss.com/docs/
+
+// headless UI docs
+
+https://headlessui.com/

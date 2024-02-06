@@ -3,6 +3,10 @@ import { Switch } from "@headlessui/react";
 
 interface RXC_TOGGLE_TYPE {
   nestedComponents?: React.ReactElement[];
+  attribute: string;
+  title?: string;
+  description?: string;
+  showInfoIcon?: boolean;
 }
 
 const RXC_TOGGLE: FC<RXC_TOGGLE_TYPE> = (props) => {

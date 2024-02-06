@@ -59,6 +59,10 @@ const DoubleSelect: FC<DoubleSelect_TYPE> = (props) => {
             </Listbox.Button>
             {open && (
               <Listbox.Options className="absolute flex flex-col justify-between border w-full bg-white z-10">
+                <div className="flex gap-[1px] text-white whitespace-nowrap">
+                  <button className="flex-1 text-center bg-primary">-</button>
+                  <button className="flex-1 text-center bg-primary">+</button>
+                </div>
                 <div className="flex-1">
                   <Listbox.Option
                     value={zero}
