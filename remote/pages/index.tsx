@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
-import Backend from "./backend";
+import Backend from "../backend";
 
 const queryClient = new QueryClient();
 

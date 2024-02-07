@@ -2,12 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import React, { useEffect } from "react";
 import { getBackofficeConfig } from "./api";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Layout from "../components/layout/Layout";
-import Step from "../step";
+import Layout from "../pages/components/layout/Layout";
+import Step from "../pages/step";
 import { useDispatch, useSelector } from "react-redux";
 import { workflowActions } from "@/redux/slices/workflow";
+import useBackend from "@/hooks/useBackend";
 
 const Backend = ({ config, rxcBrain }) => {
+  const configFromBackend = useBackend(config);
+  console.log(configFromBackend);
   const dispatch = useDispatch();
   const currentStep = useSelector((state: any) => state.workflow.currentStep);
   const {

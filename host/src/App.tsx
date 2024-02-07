@@ -9,13 +9,13 @@ const RemoteComponent = lazy(() =>
   })
 );
 
-const App = ({config = null}: any) => (
-  <div className="">
+const App = ({ config = null }: any) => {
+  return (
     <Suspense fallback={null}>
-      <RemoteComponent config={config} rxcBrain={brain}/>
+      <RemoteComponent config={config} rxcBrain={brain} />
     </Suspense>
-  </div>
-);
+  );
+};
 
 const rxcWidget = {
   new: (config: any) => {
@@ -23,13 +23,13 @@ const rxcWidget = {
     return {
       render: () => {
         ReactDOM.render(
-          <App config={config}/>,
+          <App config={config} />,
           document.querySelector(config.selector)
         );
       },
     };
   },
-}
+};
 
 window.RXC = { rxcWidget };
 

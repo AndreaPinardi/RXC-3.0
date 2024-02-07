@@ -1,3 +1,5 @@
+import JSZip from "jszip";
+
 export function getChannelFromBrand(brand) {
   switch (brand) {
     case "arnette":
@@ -61,4 +63,20 @@ export const env = () => {
   const splittedScript = rxcScript?.src.split(/[//]/);
   const env = splittedScript?.[3];
   return env;
+};
+
+export function isLocalHost() {
+  return (
+    window.location.href.indexOf("localhost") !== -1 ||
+    window.location.href.indexOf("127.0.0.1") !== -1
+  );
+}
+
+export const extractJsonfromZip = async (file, callback) => {
+  const zip = new JSZip();
+  const extractedFiles = await zip.loadAsync(file);
+  extractedFiles.forEach(async (relativePath, file) => {
+    const content = await file.async("string");
+    callback(JSON.parse(content));
+  });
 };
