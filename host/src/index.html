@@ -7,14 +7,13 @@
   </head>
 
   <body>
-    <div id="app"></div>
+    <div id="rxcApp"></div>
+    <script type="module" src="./mock/config.js"></script>
   </body>
   <script>
-    const config = {
-      selector: "#app",
-    };
     setTimeout(() => {
       var myWidget = RXC.rxcWidget.new(config);
+      console.log(config);
       myWidget.render();
     }, 1000);
   </script>

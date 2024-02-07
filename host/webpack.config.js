@@ -1,80 +1,48 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const Dotenv = require("dotenv-webpack");
-const deps = require("./package.json").dependencies;
-const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
+const webpack = require("webpack");
 
-module.exports = (_, argv) => ({
-  // entry: {
-  //   main: "./src/index.ts",
-  //   brain: "./src/brain.ts",
-  // },
-  output: {
-    // filename: '[name].js',
-    // path: path.resolve(__dirname, 'dist'),
-    chunkFilename: "[id].chunk.js",
-    path: path.join(__dirname, "./build"),
-    filename: "rxc.js",
-    libraryTarget: "umd",
-    publicPath: "",
-  },
-
-  resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
-  },
-
-  devServer: {
-    port: 8080,
-    historyApiFallback: true,
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.m?js/,
-        type: "javascript/auto",
-        resolve: {
-          fullySpecified: false,
-        },
-      },
-      {
-        test: /\.(css|s[ac]ss)$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.(ts|tsx|js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
-
-  plugins: [
-    new ModuleFederationPlugin({
-      name: "host",
-      filename: "remoteEntry.js",
-      remotes: {
-        remote:
-          "remote@http://localhost:8081/_next/static/chunks/remoteEntry.js",
-      },
-      exposes: {},
-      shared: {
-        ...deps,
-        react: {
-          singleton: true,
-          requiredVersion: deps.react,
-        },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: deps["react-dom"],
-        },
-      },
-    }),
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-    }),
-    new Dotenv(),
-  ],
-});
+module.exports = (env, argv) => {
+  console.log("CURRENT ENVIRONMENT: " + env.mode);
+  const envConfig = require(`./compilers/${
+    env.mode === "uat" ? "production" : env.mode || "development"
+  }.js`)(env);
+  if (env.mode != "production" && env.mode != "uat") {
+    envConfig.plugins.push(
+      new CopyPlugin({
+        patterns:
+          env.mode === "development"
+            ? [
+                {
+                  from: "src/mock/" + (env.brand || "default") + ".js",
+                  to: "mock/config.js",
+                },
+                {
+                  from: "src/mock/mocker.js",
+                  to: "mock/mocker.js",
+                },
+              ]
+            : [
+                {
+                  from:
+                    "src/mock/mock-standalone/" +
+                    (env.brand || "default") +
+                    ".js",
+                  to: "mock/" + (env.brand || "default") + ".js",
+                },
+              ],
+      })
+    );
+  }
+  // if (
+  //   env.mode == "production" ||
+  //   env.mode == "uat" ||
+  //   env.mode == "standalone"
+  // ) {
+  //   envConfig.plugins.push(
+  //     new webpack.optimize.LimitChunkCountPlugin({
+  //       maxChunks: 1,
+  //     })
+  //   );
+  // }
+  return envConfig;
+};
