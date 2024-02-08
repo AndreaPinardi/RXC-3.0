@@ -1,5 +1,6 @@
 import axios from "axios";
 import glassesFlowMock from "@/mock/flow/glasses";
+import glassesFlowMock2 from "@/mock/flow/glasses2";
 import { extractJsonfromZip } from "@/utils/functions";
 
 const mockBackofficeUrl =
@@ -8,7 +9,7 @@ const mockBackofficeUrl =
 export const getBackofficeConfig = async () => {
   // const response = await axios.get(mockBackofficeUrl);
   // return response.data;
-  return glassesFlowMock;
+  return glassesFlowMock2;
 };
 
 export const getLensesDataContent = (url, onSuccess) => {

@@ -215,7 +215,6 @@ export default function useBackend(config: any) {
           },
         };
       }
-      console.log(newConfig);
       setNewConfig(newConfig);
       setIsLoading(false);
     }

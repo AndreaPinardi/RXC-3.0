@@ -17,7 +17,7 @@ interface RXC_FOOTER_TYPE {
 }
 
 const RXC_FOOTER: FC<RXC_FOOTER_TYPE> = (props) => {
-  return <div>RXC_FOOTER</div>;
+  return <div className="mt-auto">RXC_FOOTER</div>;
 };
 
 export default RXC_FOOTER;

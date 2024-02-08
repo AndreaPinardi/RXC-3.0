@@ -1,7 +1,15 @@
-const brain = {
-    filter: () => console.log("ciao")
+class Brain {
+  constructor() {
+    this.packages = null;
+    this.filteredPackages = null;
+    this.selections = [];
+  }
+
+  new(config) {
+    this.packages = config?.lensesData?.packages;
+  }
 }
 
-window.RXCBrain = {brain}
+const brain = new Brain();
 
-export default brain
+export default brain;

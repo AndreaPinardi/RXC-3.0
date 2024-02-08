@@ -3,7 +3,6 @@ import React, { FC } from "react";
 interface RXC_ATTRIBUTE_TILE_LIST_TYPE {
   svg?: boolean;
   attribute: string;
-  enableGrayout?: boolean;
   addTilesTitlePrefix?: ["designType"];
   activateMoneySavingsBadge?: boolean;
 }

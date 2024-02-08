@@ -7,11 +7,11 @@ import Backend from "../backend";
 
 const queryClient = new QueryClient();
 
-export default function Main({ config = null, rxcBrain = null }) {
+export default function Main({ config = null }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
-        <Backend config={config} rxcBrain={rxcBrain} />
+        <Backend config={config} />
       </Provider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

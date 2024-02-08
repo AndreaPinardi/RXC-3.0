@@ -6,8 +6,6 @@ interface RXC_MANUAL_LIST_TYPE {
     title?: string;
     description?: string;
     key: string;
-    component?: string;
-    view: string;
   }[];
 }
 

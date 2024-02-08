@@ -12,7 +12,7 @@ const RemoteComponent = lazy(() =>
 const App = ({ config = null }: any) => {
   return (
     <Suspense fallback={null}>
-      <RemoteComponent config={config} rxcBrain={brain} />
+      <RemoteComponent config={config} />
     </Suspense>
   );
 };
@@ -32,5 +32,7 @@ const rxcWidget = {
 };
 
 window.RXC = { rxcWidget };
+
+window.RXCBrain = brain;
 
 //ReactDOM.render(<App />, document.getElementById("app"));

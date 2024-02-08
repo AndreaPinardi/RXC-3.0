@@ -8,9 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { workflowActions } from "@/redux/slices/workflow";
 import useBackend from "@/hooks/useBackend";
 
-const Backend = ({ config, rxcBrain }) => {
-  const configFromBackend = useBackend(config);
-  console.log(configFromBackend);
+const Backend = ({ config }) => {
+  //const configFromBackend = useBackend(config);
   const dispatch = useDispatch();
   const currentStep = useSelector((state: any) => state.workflow.currentStep);
   const {
@@ -24,7 +23,7 @@ const Backend = ({ config, rxcBrain }) => {
 
   useEffect(() => {
     if (backofficeConfig) {
-      dispatch(workflowActions.setSteps(backofficeConfig.layout.right.steps));
+      dispatch(workflowActions.setSteps(backofficeConfig.stepSection.steps));
     }
   }, [backofficeConfig, dispatch]);
 
