@@ -140,6 +140,35 @@ export default {
           },
         ],
       },
+      {
+        definingAttributes: {
+          number: "3",
+          title: "LensColor",
+          autoproceed: false,
+          autoproceedLabel: "Apply",
+          autoSkip: true,
+          hasGreyout: false,
+          analytics_ID: "LensColor",
+        },
+        components: [
+          {
+            id: "RXC_HEAD_NAV",
+            order: 0,
+            insuranceButtonLabel: "Add insurance benefits",
+            applyingInsurance: "Applying insurance benefits",
+            insuranceLabelRemove: "Remove insurance benefits",
+            price_totalFrameLens_frame: "Frame price",
+            price_totalFrameLens_frameLensTotal: "Frame + lenses price",
+          },
+          {
+            id: "RXC_TITLE_DESCRIPTION",
+            order: 1,
+            title: "Choose your vision need",
+            description:
+              "Choose between prescription lenses, non-prescription lenses or no lenses depending on your needs.",
+          },
+        ],
+      },
     ],
   },
 };
