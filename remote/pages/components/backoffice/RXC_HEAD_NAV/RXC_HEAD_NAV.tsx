@@ -1,13 +1,5 @@
 import React, { FC } from "react";
 
-const DEFAULT_LABELS = {
-  insuranceButtonLabel: "Add insurance benefits",
-  applyingInsurance: "Applying insurance benefits",
-  insuranceLabelRemove: "Remove insurance benefits",
-  price_totalFrameLens_frame: "Frame price",
-  price_totalFrameLens_frameLensTotal: "Frame + lenses price",
-};
-
 interface RXC_HEAD_NAV_TYPE {
   insuranceButtonLabel: string;
   applyingInsurance: string;

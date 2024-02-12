@@ -17,9 +17,9 @@ function readJSONFile(filename) {
 
 function formatType(tsType) {
   if (
-    tsType.name === "Array" &&
-    tsType.elements &&
-    tsType.elements.length > 0
+    tsType?.name === "Array" &&
+    tsType?.elements &&
+    tsType?.elements.length > 0
   ) {
     const elementType = tsType.elements[0];
     if (elementType.name === "signature") {
@@ -40,7 +40,7 @@ function formatType(tsType) {
       return { type: "Array", elements: elementType.name };
     }
   } else {
-    return { type: tsType.name };
+    return { type: tsType?.name };
   }
 }
 

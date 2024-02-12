@@ -16,7 +16,13 @@ interface RXC_EXIT_POPUP_TYPE {
   exitSave: string;
 }
 
-const RXC_EXIT_POPUP: FC<RXC_EXIT_POPUP_TYPE> = (props) => {
+const RXC_EXIT_POPUP: FC<RXC_EXIT_POPUP_TYPE> = ({
+  exitTitle = "Are you sure you want to exit?",
+  exitSubtitle = "Your lens selection will not be saved",
+  exitYes = "Yes, exit",
+  exitContinueEditing = "No, continue",
+  exitSave = "Save and continue shopping",
+}) => {
   return <div>RXC_EXIT_POPUP</div>;
 };
 

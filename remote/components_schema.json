@@ -21,7 +21,63 @@
     ],
     "previewImage": "",
     "modalImage": "",
-    "props": {}
+    "props": {
+      "continueModal_titleNoAdd": {
+        "required": false,
+        "default": "\"ARE YOU SURE YOU WANT TO CONTINUE?\"",
+        "type": "string"
+      },
+      "continueModal_messageNoAdd": {
+        "required": false,
+        "default": "\"Please make sure to enter the Addition (ADD) value if it is listed in your prescription, otherwise please proceed without.\"",
+        "type": "string"
+      },
+      "continueModal_continueNoAdd": {
+        "required": false,
+        "default": "\"Continue without (add)\"",
+        "type": "string"
+      },
+      "continueModal_title": {
+        "required": false,
+        "default": "\"Send prescription later\"",
+        "type": "string"
+      },
+      "continueModal_message": {
+        "required": false,
+        "default": "\"By clicking on continue, you will be skipping the prescription step. We’ll ask for it after your order, either by uploading it or having us call your doctor.\"",
+        "type": "string"
+      },
+      "continueModal_continue": {
+        "required": false,
+        "default": "\"Yes, continue\"",
+        "type": "string"
+      },
+      "continueModal_cancel": {
+        "required": false,
+        "default": "\"No, go back\"",
+        "type": "string"
+      },
+      "noPowerModal_title": {
+        "required": false,
+        "default": "\"continue with non-prescription lenses\"",
+        "type": "string"
+      },
+      "noPowerModal_subtitle": {
+        "required": false,
+        "default": "\"You have not entered a prescription for your glasses. Would you like to proceed with non-prescription lenses?\"",
+        "type": "string"
+      },
+      "noPowerModal_continue": {
+        "required": false,
+        "default": "\"yes, continue\"",
+        "type": "string"
+      },
+      "noPowerModal_cancel": {
+        "required": false,
+        "default": "\"no, cancel\"",
+        "type": "string"
+      }
+    }
   },
   "RXC_BRAND_FOOTER": {
     "displayName": "RXC_BRAND_FOOTER",
@@ -161,8 +217,9 @@
       },
       "nestedComponents": {
         "required": false,
-        "type": "tuple",
-        "default": null
+        "type": "Array",
+        "default": null,
+        "elements": "Object"
       }
     }
   },
@@ -214,8 +271,9 @@
       },
       "nestedComponents": {
         "required": false,
-        "type": "tuple",
-        "default": null
+        "type": "Array",
+        "default": null,
+        "elements": "Object"
       }
     }
   },
@@ -237,29 +295,29 @@
     "modalImage": "",
     "props": {
       "exitTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Are you sure you want to exit?\""
       },
       "exitSubtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Your lens selection will not be saved\""
       },
       "exitYes": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Yes, exit\""
       },
       "exitContinueEditing": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"No, continue\""
       },
       "exitSave": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Save and continue shopping\""
       }
     }
   },
@@ -272,29 +330,29 @@
     "modalImage": "",
     "props": {
       "insuranceButtonLabel": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Add insurance benefits\""
       },
       "applyingInsurance": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Applying insurance benefits\""
       },
       "insuranceLabelRemove": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Remove insurance benefits\""
       },
       "price_totalFrameLens_frame": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Frame price\""
       },
       "price_totalFrameLens_frameLensTotal": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Frame + lenses price\""
       },
       "showAddToBag": {
         "required": false,
@@ -356,84 +414,84 @@
     "modalImage": "",
     "props": {
       "title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"How to read your prescription\""
       },
       "subtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"If you have a prescription for eyeglasses, the prescription information will typically include the following:\""
       },
       "rightEye_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\" OD (Right Eye)\""
       },
       "rightEye_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "'OD stands for \"oculus dexter\" which is Latin for \"right eye\".'"
       },
       "leftEye_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\" OS (Left Eye)\""
       },
       "leftEye_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "'OS stands for \"oculus sinister\" which is Latin for “left eye”.'"
       },
       "sphere_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Sphere (SPH) - also known as Power (PWR)\""
       },
       "sphere_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"They mean the same thing: the strength of your prescription. If you're nearsighted you will have a minus (-) before your values, and if you’re or farsighted you will have a plus (+).\""
       },
       "cylinder_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Cylinder (CYL)\""
       },
       "cylinder_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"This is for people with astigmatism. This is when one part of the eye needs more correction than the rest. The Cylinder value is written with a minus (-) sign.\""
       },
       "axis_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Axis\""
       },
       "axis_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"This is only for people with astigmatism. The axis is a number between 0 and 180 and determines the orientation of the Cylinder (CYL).\""
       },
       "add_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Add\""
       },
       "add_description": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"This indicates the additional magnifying power that is added to the lens to correct presbyopia, a common age-related condition that affects near vision.\""
       },
       "infoText": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"If any of this information isn’t included in your prescription, you can leave the field blank.\""
       },
       "customerService": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Not sure about something? Call our Customer Service experts\""
       }
     }
   },
@@ -549,509 +607,550 @@
         "default": null
       },
       "pupillaryDistanceSubtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"You can select the default settings of 61 for women and 64 for men if you have an average or low prescription. If you have a strong prescription or if you want to know your exact Pupillary Distance, please \""
       },
       "selectNewFrame": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Select new frame\""
       },
       "title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Enter your prescription\""
       },
       "subtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Insert the parameters you find on your prescription in the table below.\""
       },
       "rightEye_initials": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"OD\""
       },
       "rightEye_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"(Right)\""
       },
       "leftEye_initials": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"OS\""
       },
       "leftEye_name": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"(Left)\""
       },
       "sphere": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"SPH (Sphere)\""
       },
       "cylinder": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"CYL (Cylinder)\""
       },
       "axis": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Axis\""
       },
       "add": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Add\""
       },
       "addPlaceholder": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"None\""
       },
       "vertical": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Vertical (Δ)\""
       },
       "baseDirection": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Base Direction\""
       },
       "horizontal": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Horizontal (Δ)\""
       },
       "pupillaryDistance": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"PD (Pupillary distance)\""
       },
       "pdLeft": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Left\""
       },
       "pdRight": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Right\""
       },
       "iHaveTwoPd": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"I have 2 Pupillary Distance numbers\""
       },
       "commentsTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Comments\""
       },
       "applyButton": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Continue\""
       },
       "applyButtonSave": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Save and continue\""
       },
       "howToRead": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"How to read your prescription\""
       },
       "pupillaryDistanceWarningValue": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please input your pupillary distance, if you don’t have it you can use the default from the above or you can \""
       },
       "pupillaryDistanceMisurePDAction": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"measure your Pupillary Distance.\""
       },
       "pupillaryDistanceMisurePDActionHowToRead": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"measure your PD\""
       },
       "pupillaryDistanceWarningTooltip": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Provide text for this tooltip\""
       },
       "moreOptions": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"More options\""
       },
       "incompatibleFrame": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"We're sorry - the frames you’ve chosen aren't compatible with your prescription.<br/>Please select another style. Have questions? You can <a href='https://www.glasses.com/gl-us/contact-us'>contact our Customer Service</a> team.\""
       },
       "incompatibleLenses": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"We're sorry, the prescription you've entered isn't compatible with our lenses offered online. Find a store near you or contact our <a href='https://www.glasses.com/gl-us/contact-us'>Customer Service</a> team for more information.\""
       },
       "incompatibleLensTypeErrorSingle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"You selected single vision lenses, but your saved prescription is for progressive lenses. We have updated your prescription below. Please check that it’s still valid.\""
       },
       "incompatibleLensTypeErrorProgressive": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"You selected progressive lenses, but your saved prescription is for single vision lenses. We have updated your prescription below. Please check that it’s still valid.\""
       },
       "clearAll": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"clear all\""
       },
       "alerts_pdValueWarningDigitalOptometrySmaller": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is smaller than average, we suggest double checking your prescription. You can leave the default values written above or you can \""
       },
       "alerts_pdValueWarningDigitalOptometryLarger": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is larger than average, we suggest double checking your prescription. You can leave the default values written above or you can \""
       },
       "alerts_pdValueWarningSmaller": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is smaller than average, we suggest double checking your prescription.</b></br>You can leave the default setting of 63 which is the average measurement for adults.<br>If we need any more information about your prescription, one of our experts will be in touch.\""
       },
       "alerts_pdValueWarningLarger": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is larger than average, we suggest double checking your prescription.</b></br>You can leave the default setting of 63 which is the average measurement for adults.<br>If we need any more information about your prescription, one of our experts will be in touch.\""
       },
       "alerts_pdValueWarning2": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is smaller than average, we suggest double checking your prescription. If you don’t have the Pupillary Distance here .\""
       },
       "alerts_missingBaseDir": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please choose the base direction for your prism\""
       },
       "alerts_missingPrismValues": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please choose the prism value\""
       },
       "alerts_missingValues": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Complete the missing values\""
       },
       "alerts_incompatibleWithPrescriptionTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Sorry! The frame you’ve chosen isn’t compatible with your prescription\""
       },
       "alerts_incompatibleWithPackagesTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Sorry! The prescription you've chosen isn't compatible with any of our available lenses for this frame\""
       },
       "alerts_shopCompatible": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Shop compatible frames\""
       },
       "alerts_clearAll": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Clear all\""
       },
       "alerts_agreementTextMobile": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"By clicking this box, I confirm that the prescription values entered above are taken from a valid (not expired) prescription issued to me, signed by a licensed optometrist or ophthalmologist.\""
       },
       "alerts_axisRangeError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The AXIS values you’ve inserted are not correct! These values must be between 1 and 180.\""
       },
       "alerts_axisZeroError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The AXIS values you’ve inserted are not correct! If CYL value is higher or lower than 0,  AXIS values can’t be 0.\""
       },
       "alerts_sphPositiveNegativeWarning": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"You’ve inserted 1 positive and 1 negative value, which is very rare. <br>We suggest double checking your prescription. If this is correct, you can proceed.\""
       },
       "alerts_pdValueWarning": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The selected Pupillary Distance is outside the normal range, we suggest double checking your prescription. You can leave the default setting of 63 which is the average measurement for adults. \\nIf we need any more information about your prescription, one of our experts will be in touch.\""
       },
       "alerts_requiredToProceed": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"This is required to proceed\""
       },
       "alerts_incompatibleWithPrescriptionBody": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"but don’t worry, compatible frames are available\""
       },
       "alerts_agreementText": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"By clicking this box, I confirm that the prescription values entered above are taken from a valid (not expired) prescription issued to me, signed by a licensed optometrist or ophthalmologist.\""
       },
       "digitalOptometry_title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"How to measure your Pupillary Distance\""
       },
       "digitalOptometry_appSubtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Your Pupillary Distance, or PD, is the distance in millimeters (mm) from the center of one pupil to the center of the other. It indicates exactly which part of the lens you look through, ensuring optimal comfort and clarity. You can measure with the app or manually.\""
       },
       "digitalOptometry_manuallySubtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Your Pupillary Distance, or PD, is the distance in millimeters (mm) from the center of one pupil to the center of the other. You can measure with the app or manually.\""
       },
       "digitalOptometry_toggle_app": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"WITH THE APP\""
       },
       "digitalOptometry_toggle_manually": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"MANUALLY\""
       },
       "digitalOptometry_opthyDesc": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"<b>Get your glasses just right with Opthy.</b><br/><p>Opthy measures your Pupillary Distance, allowing you to find the most comfortable, personalized fit.</p><p>App available on iPhone X and above.</p>\""
       },
       "digitalOptometry_manuallyContent": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"<div>If you want, you can measure your Pupillary Distance (PD) yourself by following these steps:</div><ul><li>Grab a small ruler in one hand, and have your pencil and paper handy.</li><li>Now position yourself approximately 8 inches (20 cm) away from a mirror.</li><li>Close your left eye and align the 0 over the center of your right pupil.</li><li>Measure the distance from your right to your left pupil.</li><li>The number that lines up directly over your left pupil is your PD (an average PD for an adult ranges between 58 and 65).</li></ul>\""
       },
       "issueDate_label": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Issue date (MM/YYYY)\""
       },
       "issueDate_missingError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please insert date\""
       },
       "issueDate_formatError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"The date entered is not valid\""
       },
       "issueDate_tooltipText": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Before submitting your prescription, please check the expiration date to make sure it is current and valid. We only accept prescriptions that have been issued within the last 2 years. By selecting the tick box and continuing below, you agree to our privacy policy and T&Cs.\""
       },
       "samePrescriptionBothEyes": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Same prescription for both eyes\""
       },
       "continueModal_titleNoAdd": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_messageNoAdd": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_continueNoAdd": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_title": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_message": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_continue": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "continueModal_cancel": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "noPowerModal_title": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "noPowerModal_subtitle": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "noPowerModal_continue": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "noPowerModal_cancel": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "addPrismValues": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"My prescription includes prism values\""
       },
       "whatIsIt": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"What is PD (Pupillary Distance)\""
       },
       "editTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Edit your prescription\""
       },
       "withoutPrescriptionFromMyAccount": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"You don’t have a prescription saved in your account. Add your prescription below and save it for future purchases or go back and choose another method.\""
       },
       "californian_toggle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Are you a California resident?\""
       },
       "californian_info": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please note that besides adding prescription values manually, California residents are also required to electronically transmit their valid prescription.\""
       },
       "californian_infoCMD": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Please note that besides adding prescription values manually, <b>California residents are also required to electronically transmit their valid prescription</b>. Choose an option to proceed.\""
       },
       "californian_chooseTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"CHOOSE HOW TO SEND YOUR PRESCRIPTION\""
       },
       "californian_uploadTitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"UPLOAD YOUR PRESCRIPTION\""
       },
       "californian_uploadDesc": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"We accept the following file formats: .pdf, .png, .jpeg, .gif, .tiff, .bmp, .docx (max 10 MB) and IWork pages.\""
       },
       "californian_uploadButton": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Upload\""
       },
       "californian_callMyDoc": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"CALL MY DOCTOR\""
       },
       "californian_callMyDocButton": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"FIND YOUR DOCTOR\""
       },
       "californian_yes": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"YES\""
       },
       "californian_no": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"NO\""
       },
       "californian_modalMissingPrescription_title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Missing prescription values\""
       },
       "californian_modalMissingPrescription_subtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"If you don’t fill the values we won’t be able to suggest the right lens for you\""
       },
       "californian_modalMissingPrescription_bottonYes": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"YES, CONTINUE\""
       },
       "californian_modalMissingPrescription_bottonNo": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"NO, GO BACK\""
       },
       "proceedCheckbox": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"By clicking this box, I confirm that the prescription values entered above are taken from a unexpired written prescription issued to me, signed by a licensed optometrist or ophthalmologist.\""
       },
       "proceedCheckboxError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Required to proceed\""
       },
       "savePrescriptionInAccount": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Save prescription in My Account\""
       },
       "newPrescriptionNameError": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Prescription name field cannot be empty\""
       },
       "prescriptionName": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Prescription name\""
+      },
+      "manualPreviewTitle": {
+        "required": false,
+        "default": "\"Your prescription details\""
+      },
+      "seeDetails_sphere": {
+        "required": false,
+        "default": "\"SPH\""
+      },
+      "seeDetails_cylinder": {
+        "required": false,
+        "default": "\"CYL\""
+      },
+      "seeDetails_axis": {
+        "required": false,
+        "default": "\"Axis\""
+      },
+      "seeDetails_add": {
+        "required": false,
+        "default": "\"ADD\""
+      },
+      "seeDetails_pd": {
+        "required": false,
+        "default": "\"PD\""
+      },
+      "seeDetails_od": {
+        "required": false,
+        "default": "\"OD\""
+      },
+      "seeDetails_right": {
+        "required": false,
+        "default": "\"Right\""
+      },
+      "seeDetails_left": {
+        "required": false,
+        "default": "\"Left\""
+      },
+      "seeDetails_os": {
+        "required": false,
+        "default": "\"OS\""
+      },
+      "seeDetails_vertical": {
+        "required": false,
+        "default": "\"Vertical Prism (Δ)\""
+      },
+      "seeDetails_baseDirection": {
+        "required": false,
+        "default": "\"Base Direction\""
+      },
+      "seeDetails_horizontal": {
+        "required": false,
+        "default": "\"Horizontal Prism (Δ)\""
       }
     }
   },
@@ -1204,8 +1303,9 @@
       },
       "nestedComponents": {
         "required": false,
-        "type": "tuple",
-        "default": null
+        "type": "Array",
+        "default": null,
+        "elements": "Object"
       }
     }
   },
@@ -1252,8 +1352,9 @@
       },
       "nestedComponents": {
         "required": false,
-        "type": "tuple",
-        "default": null
+        "type": "Array",
+        "default": null,
+        "elements": "Object"
       }
     }
   },
@@ -1356,8 +1457,9 @@
       },
       "nestedComponents": {
         "required": false,
-        "type": "tuple",
-        "default": null
+        "type": "Array",
+        "default": null,
+        "elements": "Object"
       }
     }
   },
@@ -1379,54 +1481,54 @@
     "modalImage": "",
     "props": {
       "title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Select your prescription\""
       },
       "subtitle": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Choose the preferred prescription and we’ll take care of the rest. \\n Can’t find it?\""
       },
       "subtitleAdd": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Add a new prescription\""
       },
       "prescriptionName": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Prescription name\""
       },
       "uploadedOn": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Last updated: \""
       },
       "today": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Today\""
       },
       "yesterday": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Yesterday\""
       },
       "justUpdated": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Just updated\""
       },
       "olderThanYearBanner": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"This prescription was uploaded 1 year ago. Please check if it is still valid.\""
       },
       "showPrescription": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"show prescription\""
       }
     }
   },
