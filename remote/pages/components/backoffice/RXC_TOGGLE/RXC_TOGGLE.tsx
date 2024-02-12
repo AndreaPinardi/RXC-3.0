@@ -6,7 +6,7 @@ interface RXC_TOGGLE_TYPE {
   valueDependency?: string;
   viewMode?: string;
   nestedViewMode?: string;
-  nestedComponents?: [];
+  nestedComponents?: Object[];
   title?: string;
   description?: string;
   showInfoIcon?: boolean;

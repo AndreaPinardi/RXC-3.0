@@ -1,84 +1,90 @@
 const fs = require("fs");
+const { merge } = require("lodash");
 
 // Specify the path to your JSON file
-const filePath = "./components.json";
+const filePath = "./components_schema.json";
+const filePath2 = "./components_schema_defaults.json";
 
-// Read the JSON file
-fs.readFile(filePath, "utf8", (err, data) => {
-  if (err) {
-    console.error("Error reading the file:", err);
-    return;
+function readJSONFile(filename) {
+  try {
+    const rawData = fs.readFileSync(filename);
+    return JSON.parse(rawData);
+  } catch (error) {
+    console.error(`Error reading file ${filename}:`, error);
+    return null;
   }
+}
 
-  // Parse the JSON data
-  const jsonData = JSON.parse(data);
-
-  // Modify the JSON data as needed
-
-  function formatType(tsType) {
-    if (
-      tsType.name === "Array" &&
-      tsType.elements &&
-      tsType.elements.length > 0
-    ) {
-      const elementType = tsType.elements[0];
-      if (elementType.name === "signature") {
-        return {
-          type: "Array",
-          elements: {
-            type: elementType.type,
-            properties: elementType.signature.properties.map((prop) => ({
-              key: prop.key,
-              value: {
-                type: prop.value.name,
-                required: prop.value.required,
-              },
-            })),
-          },
-        };
-      } else {
-        return { type: "Array", elements: elementType.name };
-      }
+function formatType(tsType) {
+  if (
+    tsType.name === "Array" &&
+    tsType.elements &&
+    tsType.elements.length > 0
+  ) {
+    const elementType = tsType.elements[0];
+    if (elementType.name === "signature") {
+      return {
+        type: "Array",
+        elements: {
+          type: elementType.type,
+          properties: elementType.signature.properties.map((prop) => ({
+            key: prop.key,
+            value: {
+              type: prop.value.name,
+              required: prop.value.required,
+            },
+          })),
+        },
+      };
     } else {
-      return { type: tsType.name };
+      return { type: "Array", elements: elementType.name };
     }
+  } else {
+    return { type: tsType.name };
   }
+}
 
-  function formatJson(json) {
-    const formatted = {};
+function formatJson(json) {
+  const formatted = {};
 
-    Object.keys(json).forEach((key) => {
-      const componentArray = json[key];
-      if (componentArray.length > 0) {
-        const component = componentArray[0];
-        const newComponent = {
-          displayName: component.displayName,
-          props: {},
-        };
+  Object.keys(json).forEach((key) => {
+    const componentArray = json[key];
+    if (componentArray.length > 0) {
+      const component = componentArray[0];
+      const newComponent = {
+        displayName: component.displayName,
+        props: {},
+      };
 
-        if (component.props) {
-          Object.keys(component.props).forEach((propName) => {
-            const prop = component.props[propName];
-            newComponent.props[propName] = {
-              required: prop.required,
-              ...formatType(prop.tsType),
-            };
-          });
-        }
-
-        formatted[component.displayName] = newComponent;
+      if (component.props) {
+        Object.keys(component.props).forEach((propName) => {
+          const prop = component.props[propName];
+          newComponent.props[propName] = {
+            required: prop.required,
+            default: prop?.defaultValue?.value || null,
+            ...formatType(prop.tsType),
+          };
+        });
       }
-    });
 
-    return formatted;
-  }
+      formatted[component.displayName] = newComponent;
+    }
+  });
 
-  const formattedJson = formatJson(jsonData);
+  return formatted;
+}
 
-  // Convert the modified data back to JSON
-  const modifiedJson = JSON.stringify(formattedJson, null, 2); // The third parameter (2) specifies the indentation level for formatting.
+const schema = readJSONFile(filePath);
+const schema_defaults = readJSONFile(filePath2);
 
-  // Write the modified JSON back to the file
+function mergeFiles(file1, file2) {
+  return merge(file1, file2);
+}
+
+if (schema && schema_defaults) {
+  const formattedJson = formatJson(schema);
+  const mergedFiles = mergeFiles(schema_defaults, formattedJson);
+  const modifiedJson = JSON.stringify(mergedFiles, null, 2);
   fs.writeFile(filePath, modifiedJson, "utf8", (err) => {
     if (err) {
       console.error("Error writing to the file:", err);
@@ -86,4 +92,4 @@ fs.readFile(filePath, "utf8", (err, data) => {
       console.log("File modified successfully!");
     }
   });
-});
+}

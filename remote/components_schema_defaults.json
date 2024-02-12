@@ -1,0 +1,1141 @@
+{
+  "RXC_BRAND_LOGO": {
+    "displayName": "RXC_BRAND_LOGO",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "position": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_0_POWER_POPUP": {
+    "displayName": "RXC_0_POWER_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_BRAND_FOOTER": {
+    "displayName": "RXC_BRAND_FOOTER",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "position": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_ATTRIBUTE_TILE_LIST": {
+    "displayName": "RXC_ATTRIBUTE_TILE_LIST",
+    "layout": ["stepSection"],
+    "availableAttributes": ["*", "warrantyOptions"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "svg": {
+        "required": false,
+        "type": "boolean"
+      },
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "addTilesTitlePrefix": {
+        "required": false,
+        "type": "Array"
+      },
+      "activateMoneySavingsBadge": {
+        "required": false,
+        "type": "boolean"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "inside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      },
+      "autoProceed": {
+        "required": false,
+        "type": "boolean"
+      }
+    }
+  },
+  "RXC_CALL_MY_DOCTOR": {
+    "displayName": "RXC_CALL_MY_DOCTOR",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_CHIPS_LIST": {
+    "displayName": "RXC_CHIPS_LIST",
+    "layout": ["stepSection"],
+    "availableAttributes": ["*", "warrantyOptions"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
+  "RXC_COLOR_PICKER": {
+    "displayName": "RXC_COLOR_PICKER",
+    "layout": ["stepSection"],
+    "availableAattributes": ["color"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
+  "RXC_CRASH_POPUP": {
+    "displayName": "RXC_CRASH_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_EXIT_POPUP": {
+    "displayName": "RXC_EXIT_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "exitTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "exitSubtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "exitYes": {
+        "required": true,
+        "type": "string"
+      },
+      "exitContinueEditing": {
+        "required": true,
+        "type": "string"
+      },
+      "exitSave": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_FOOTER": {
+    "displayName": "RXC_FOOTER",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "insuranceButtonLabel": {
+        "required": true,
+        "type": "string"
+      },
+      "applyingInsurance": {
+        "required": true,
+        "type": "string"
+      },
+      "insuranceLabelRemove": {
+        "required": true,
+        "type": "string"
+      },
+      "price_totalFrameLens_frame": {
+        "required": true,
+        "type": "string"
+      },
+      "price_totalFrameLens_frameLensTotal": {
+        "required": true,
+        "type": "string"
+      },
+      "showAddToBag": {
+        "required": false,
+        "type": "boolean"
+      }
+    }
+  },
+  "RXC_HEAD_NAV": {
+    "displayName": "RXC_HEAD_NAV",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "insuranceButtonLabel": {
+        "required": true,
+        "type": "string"
+      },
+      "applyingInsurance": {
+        "required": true,
+        "type": "string"
+      },
+      "insuranceLabelRemove": {
+        "required": true,
+        "type": "string"
+      },
+      "price_totalFrameLens_frame": {
+        "required": true,
+        "type": "string"
+      },
+      "price_totalFrameLens_frameLensTotal": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_FRAME_IMAGE": {
+    "displayName": "RXC_FRAME_IMAGE",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL": {
+    "displayName": "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string"
+      },
+      "subtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "rightEye_name": {
+        "required": true,
+        "type": "string"
+      },
+      "rightEye_description": {
+        "required": true,
+        "type": "string"
+      },
+      "leftEye_name": {
+        "required": true,
+        "type": "string"
+      },
+      "leftEye_description": {
+        "required": true,
+        "type": "string"
+      },
+      "sphere_name": {
+        "required": true,
+        "type": "string"
+      },
+      "sphere_description": {
+        "required": true,
+        "type": "string"
+      },
+      "cylinder_name": {
+        "required": true,
+        "type": "string"
+      },
+      "cylinder_description": {
+        "required": true,
+        "type": "string"
+      },
+      "axis_name": {
+        "required": true,
+        "type": "string"
+      },
+      "axis_description": {
+        "required": true,
+        "type": "string"
+      },
+      "add_name": {
+        "required": true,
+        "type": "string"
+      },
+      "add_description": {
+        "required": true,
+        "type": "string"
+      },
+      "infoText": {
+        "required": true,
+        "type": "string"
+      },
+      "customerService": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_MANUAL_INPUT_READERS": {
+    "displayName": "RXC_MANUAL_INPUT_READERS",
+    "layout": ["stepSection"],
+    "props": {}
+  },
+  "RXC_MANUAL_LIST": {
+    "displayName": "RXC_MANUAL_LIST",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "availableKeys": ["MANUAL", "ACCOUNT", "UPLOAD", "CMD", "LATER"],
+    "props": {
+      "svg": {
+        "required": false,
+        "type": "boolean"
+      },
+      "values": {
+        "required": true,
+        "type": "Array",
+        "elements": {
+          "type": "object",
+          "properties": [
+            {
+              "key": "title",
+              "value": {
+                "type": "string",
+                "required": false
+              }
+            },
+            {
+              "key": "description",
+              "value": {
+                "type": "string",
+                "required": false
+              }
+            },
+            {
+              "key": "key",
+              "value": {
+                "type": "string",
+                "required": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "RXC_PD_MODAL": {
+    "displayName": "RXC_PD_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_PD_OPTY_MODAL": {
+    "displayName": "RXC_PD_OPTY_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_PRESCRIPTION_PANEL": {
+    "displayName": "RXC_PRESCRIPTION_PANEL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "enablePrism": {
+        "required": true,
+        "type": "boolean"
+      },
+      "enablePrismComment": {
+        "required": true,
+        "type": "boolean"
+      },
+      "enableDigitalOptometry": {
+        "required": true,
+        "type": "boolean"
+      },
+      "targetDigitalOptometry": {
+        "required": true,
+        "type": "tuple"
+      },
+      "enableAgreementCheckbox": {
+        "required": true,
+        "type": "boolean"
+      },
+      "pupillaryDistanceSubtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "selectNewFrame": {
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "required": true,
+        "type": "string"
+      },
+      "subtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "rightEye_initials": {
+        "required": true,
+        "type": "string"
+      },
+      "rightEye_name": {
+        "required": true,
+        "type": "string"
+      },
+      "leftEye_initials": {
+        "required": true,
+        "type": "string"
+      },
+      "leftEye_name": {
+        "required": true,
+        "type": "string"
+      },
+      "sphere": {
+        "required": true,
+        "type": "string"
+      },
+      "cylinder": {
+        "required": true,
+        "type": "string"
+      },
+      "axis": {
+        "required": true,
+        "type": "string"
+      },
+      "add": {
+        "required": true,
+        "type": "string"
+      },
+      "addPlaceholder": {
+        "required": true,
+        "type": "string"
+      },
+      "vertical": {
+        "required": true,
+        "type": "string"
+      },
+      "baseDirection": {
+        "required": true,
+        "type": "string"
+      },
+      "horizontal": {
+        "required": true,
+        "type": "string"
+      },
+      "pupillaryDistance": {
+        "required": true,
+        "type": "string"
+      },
+      "pdLeft": {
+        "required": true,
+        "type": "string"
+      },
+      "pdRight": {
+        "required": true,
+        "type": "string"
+      },
+      "iHaveTwoPd": {
+        "required": true,
+        "type": "string"
+      },
+      "commentsTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "applyButton": {
+        "required": true,
+        "type": "string"
+      },
+      "applyButtonSave": {
+        "required": true,
+        "type": "string"
+      },
+      "howToRead": {
+        "required": true,
+        "type": "string"
+      },
+      "pupillaryDistanceWarningValue": {
+        "required": true,
+        "type": "string"
+      },
+      "pupillaryDistanceMisurePDAction": {
+        "required": true,
+        "type": "string"
+      },
+      "pupillaryDistanceMisurePDActionHowToRead": {
+        "required": true,
+        "type": "string"
+      },
+      "pupillaryDistanceWarningTooltip": {
+        "required": true,
+        "type": "string"
+      },
+      "moreOptions": {
+        "required": true,
+        "type": "string"
+      },
+      "incompatibleFrame": {
+        "required": true,
+        "type": "string"
+      },
+      "incompatibleLenses": {
+        "required": true,
+        "type": "string"
+      },
+      "incompatibleLensTypeErrorSingle": {
+        "required": true,
+        "type": "string"
+      },
+      "incompatibleLensTypeErrorProgressive": {
+        "required": true,
+        "type": "string"
+      },
+      "clearAll": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarningDigitalOptometrySmaller": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarningDigitalOptometryLarger": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarningSmaller": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarningLarger": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarning2": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_missingBaseDir": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_missingPrismValues": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_missingValues": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_incompatibleWithPrescriptionTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_incompatibleWithPackagesTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_shopCompatible": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_clearAll": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_agreementTextMobile": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_axisRangeError": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_axisZeroError": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_sphPositiveNegativeWarning": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_pdValueWarning": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_requiredToProceed": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_incompatibleWithPrescriptionBody": {
+        "required": true,
+        "type": "string"
+      },
+      "alerts_agreementText": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_title": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_appSubtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_manuallySubtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_toggle_app": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_toggle_manually": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_opthyDesc": {
+        "required": true,
+        "type": "string"
+      },
+      "digitalOptometry_manuallyContent": {
+        "required": true,
+        "type": "string"
+      },
+      "issueDate_label": {
+        "required": true,
+        "type": "string"
+      },
+      "issueDate_missingError": {
+        "required": true,
+        "type": "string"
+      },
+      "issueDate_formatError": {
+        "required": true,
+        "type": "string"
+      },
+      "issueDate_tooltipText": {
+        "required": true,
+        "type": "string"
+      },
+      "samePrescriptionBothEyes": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_titleNoAdd": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_messageNoAdd": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_continueNoAdd": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_title": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_message": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_continue": {
+        "required": true,
+        "type": "string"
+      },
+      "continueModal_cancel": {
+        "required": true,
+        "type": "string"
+      },
+      "noPowerModal_title": {
+        "required": true,
+        "type": "string"
+      },
+      "noPowerModal_subtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "noPowerModal_continue": {
+        "required": true,
+        "type": "string"
+      },
+      "noPowerModal_cancel": {
+        "required": true,
+        "type": "string"
+      },
+      "addPrismValues": {
+        "required": true,
+        "type": "string"
+      },
+      "whatIsIt": {
+        "required": true,
+        "type": "string"
+      },
+      "editTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "withoutPrescriptionFromMyAccount": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_toggle": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_info": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_infoCMD": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_chooseTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_uploadTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_uploadDesc": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_uploadButton": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_callMyDoc": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_callMyDocButton": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_yes": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_no": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_modalMissingPrescription_title": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_modalMissingPrescription_subtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_modalMissingPrescription_bottonYes": {
+        "required": true,
+        "type": "string"
+      },
+      "californian_modalMissingPrescription_bottonNo": {
+        "required": true,
+        "type": "string"
+      },
+      "proceedCheckbox": {
+        "required": true,
+        "type": "string"
+      },
+      "proceedCheckboxError": {
+        "required": true,
+        "type": "string"
+      },
+      "savePrescriptionInAccount": {
+        "required": true,
+        "type": "string"
+      },
+      "newPrescriptionNameError": {
+        "required": true,
+        "type": "string"
+      },
+      "prescriptionName": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_PRESCRIPTION_DETAILS_MODAL": {
+    "displayName": "RXC_PRESCRIPTION_DETAILS_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string"
+      },
+      "edit": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_REVIEW_PANEL": {
+    "displayName": "RXC_REVIEW_PANEL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "steps_advancedPrescription_manual_manualPreviewTitle": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_sphere": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_cylinder": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_axis": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_add": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_pd": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_od": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_right": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_left": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_os": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_vertical": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_baseDirection": {
+        "required": true,
+        "type": "string"
+      },
+      "steps_advancedPrescription_manual_seeDetails_horizontal": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_SLIDER": {
+    "displayName": "RXC_SLIDER",
+    "layout": ["stepSection"],
+    "availableAattributes": ["*", "warrantyOptions"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "showInfoIcon": {
+        "required": false,
+        "type": "boolean"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
+  "RXC_SWATCH_LIST": {
+    "displayName": "RXC_SWATCH_LIST",
+    "layout": ["stepSection"],
+    "availableAattributes": ["color, frameColor"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "price": {
+        "required": true,
+        "type": "boolean"
+      },
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
+  "RXC_TITLE_DESCRIPTION": {
+    "displayName": "RXC_TITLE_DESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "id": {
+        "required": true,
+        "type": "number"
+      },
+      "order": {
+        "required": true,
+        "type": "number"
+      },
+      "title": {
+        "required": true,
+        "type": "string",
+        "default": "How to read your prescription"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "accordion": {
+        "required": false,
+        "type": "boolean"
+      },
+      "textContent": {
+        "required": false,
+        "type": "Array",
+        "elements": "string"
+      },
+      "steps_addOns_label": {
+        "required": false,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_TOGGLE": {
+    "displayName": "RXC_TOGGLE",
+    "layout": ["stepSection"],
+    "availableAattributes": ["polar"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "showInfoIcon": {
+        "required": false,
+        "type": "boolean"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
+  "RXC_UPLOAD_PRESCRIPTION": {
+    "displayName": "RXC_UPLOAD_PRESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {}
+  },
+  "RXC_USE_SAVED_PRESCRIPTION": {
+    "displayName": "RXC_USE_SAVED_PRESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "title": {
+        "required": true,
+        "type": "string"
+      },
+      "subtitle": {
+        "required": true,
+        "type": "string"
+      },
+      "subtitleAdd": {
+        "required": true,
+        "type": "string"
+      },
+      "prescriptionName": {
+        "required": true,
+        "type": "string"
+      },
+      "uploadedOn": {
+        "required": true,
+        "type": "string"
+      },
+      "today": {
+        "required": true,
+        "type": "string"
+      },
+      "yesterday": {
+        "required": true,
+        "type": "string"
+      },
+      "justUpdated": {
+        "required": true,
+        "type": "string"
+      },
+      "olderThanYearBanner": {
+        "required": true,
+        "type": "string"
+      },
+      "showPrescription": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  },
+  "RXC_YOUR_SELECTIONS": {
+    "displayName": "RXC_YOUR_SELECTIONS",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "position": {
+        "required": true,
+        "type": "string"
+      }
+    }
+  }
+}

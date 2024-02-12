@@ -16,7 +16,13 @@ interface RXC_HEAD_NAV_TYPE {
   price_totalFrameLens_frameLensTotal: string;
 }
 
-const RXC_HEAD_NAV: FC<RXC_HEAD_NAV_TYPE> = (props) => {
+const RXC_HEAD_NAV: FC<RXC_HEAD_NAV_TYPE> = ({
+  insuranceButtonLabel = "Add insurance benefits",
+  applyingInsurance = "Applying insurance benefits",
+  insuranceLabelRemove = "Remove insurance benefits",
+  price_totalFrameLens_frame = "Frame price",
+  price_totalFrameLens_frameLensTotal = "Frame + lenses price",
+}) => {
   return <div>RXC_HEAD_NAV</div>;
 };
 

@@ -7,7 +7,7 @@ interface RXC_COLOR_PICKER_TYPE {
   valueDependency?: string;
   viewMode?: string;
   nestedViewMode?: string;
-  nestedComponents?: [];
+  nestedComponents?: Object[];
 }
 
 const RXC_COLOR_PICKER: FC<RXC_COLOR_PICKER_TYPE> = ({

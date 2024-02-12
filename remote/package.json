@@ -7,7 +7,7 @@
     "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build && npm run json-components",
     "start": "next start",
     "lint": "next lint",
-    "json-components": "npx @react-docgen/cli --pretty -o components.json ./pages/components/backoffice/**/*.tsx && node scripts/formatJson.js"
+    "json-components": "npx @react-docgen/cli --pretty -o components_schema.json ./pages/components/backoffice/**/*.tsx && node scripts/formatJson.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -36,6 +36,7 @@
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
+    "lodash": "^4.17.21",
     "postcss": "^8",
     "tailwindcss": "^3",
     "typescript": "^5"

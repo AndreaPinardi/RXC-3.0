@@ -8,7 +8,7 @@ interface RXC_ATTRIBUTE_TILE_LIST_TYPE {
   valueDependency?: string;
   viewMode?: string;
   nestedViewMode?: string;
-  nestedComponents?: [];
+  nestedComponents?: Object[];
   autoProceed?: boolean;
 }
 

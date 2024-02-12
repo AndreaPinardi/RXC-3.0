@@ -7,7 +7,7 @@ interface RXC_CHIPS_LIST_TYPE {
   valueDependency?: string;
   viewMode?: string;
   nestedViewMode?: string;
-  nestedComponents?: [];
+  nestedComponents?: Object[];
 }
 
 const RXC_CHIPS_LIST: FC<RXC_CHIPS_LIST_TYPE> = ({

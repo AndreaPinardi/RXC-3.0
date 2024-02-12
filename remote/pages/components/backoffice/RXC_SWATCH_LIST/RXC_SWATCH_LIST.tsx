@@ -6,7 +6,7 @@ interface RXC_SWATCH_LIST_TYPE {
   valueDependency?: string;
   viewMode?: string;
   nestedViewMode?: string;
-  nestedComponents?: [];
+  nestedComponents?: Object[];
 }
 
 const RXC_SWATCH_LIST: FC<RXC_SWATCH_LIST_TYPE> = ({
