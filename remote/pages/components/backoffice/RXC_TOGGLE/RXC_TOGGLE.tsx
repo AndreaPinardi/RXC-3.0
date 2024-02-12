@@ -2,14 +2,17 @@ import React, { FC, useState } from "react";
 import { Switch } from "@headlessui/react";
 
 interface RXC_TOGGLE_TYPE {
-  nestedComponents?: React.ReactElement[];
   attribute: string;
+  valueDependency?: string;
+  viewMode?: string;
+  nestedViewMode?: string;
+  nestedComponents?: [];
   title?: string;
   description?: string;
   showInfoIcon?: boolean;
 }
 
-const RXC_TOGGLE: FC<RXC_TOGGLE_TYPE> = (props) => {
+const RXC_TOGGLE: FC<RXC_TOGGLE_TYPE> = ({ nestedViewMode = "outside" }) => {
   const [enabled, setEnabled] = useState(false);
   return (
     <>

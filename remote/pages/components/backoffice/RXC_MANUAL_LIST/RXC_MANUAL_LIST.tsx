@@ -9,7 +9,7 @@ interface RXC_MANUAL_LIST_TYPE {
   }[];
 }
 
-const RXC_MANUAL_LIST: FC<RXC_MANUAL_LIST_TYPE> = ({ svg, values }) => {
+const RXC_MANUAL_LIST: FC<RXC_MANUAL_LIST_TYPE> = (props) => {
   return <div>RXC_MANUAL_LIST</div>;
 };
 

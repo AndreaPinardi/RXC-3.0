@@ -2,14 +2,17 @@ import React, { FC, useState } from "react";
 import { Switch } from "@headlessui/react";
 
 interface RXC_SLIDER_TYPE {
-  nestedComponents?: React.ReactElement[];
   attribute: string;
+  valueDependency?: string;
+  viewMode?: string;
+  nestedViewMode?: string;
+  nestedComponents?: [];
   title?: string;
   description?: string;
   showInfoIcon?: boolean;
 }
 
-const RXC_SLIDER: FC<RXC_SLIDER_TYPE> = (props) => {
+const RXC_SLIDER: FC<RXC_SLIDER_TYPE> = ({ nestedViewMode = "outside" }) => {
   const [enabled, setEnabled] = useState(false);
   return (
     <div className="relative w-full">

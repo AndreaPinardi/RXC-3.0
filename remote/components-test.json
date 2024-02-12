@@ -1,6 +1,9 @@
 {
   "RXC_BRAND_LOGO": {
     "displayName": "RXC_BRAND_LOGO",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "position": {
         "required": true,
@@ -10,10 +13,16 @@
   },
   "RXC_0_POWER_POPUP": {
     "displayName": "RXC_0_POWER_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_BRAND_FOOTER": {
     "displayName": "RXC_BRAND_FOOTER",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "position": {
         "required": true,
@@ -23,11 +32,11 @@
   },
   "RXC_ATTRIBUTE_TILE_LIST": {
     "displayName": "RXC_ATTRIBUTE_TILE_LIST",
-    "availableAttributes": ["*", "warrantyOptions"],
     "layout": ["stepSection"],
+    "availableAttributes": ["*", "warrantyOptions"],
     "nestedViewModes": ["inside", "outside"],
-    "previewImage": "https...",
-    "modalImage": "https...",
+    "previewImage": "",
+    "modalImage": "",
     "configurable": true,
     "props": {
       "svg": {
@@ -57,7 +66,7 @@
       "nestedViewMode": {
         "required": false,
         "type": "string",
-        "default": "outside"
+        "default": "inside"
       },
       "nestedComponents": {
         "required": false,
@@ -65,16 +74,25 @@
       },
       "autoProceed": {
         "required": false,
-        "type": "string"
+        "type": "boolean"
       }
     }
   },
   "RXC_CALL_MY_DOCTOR": {
     "displayName": "RXC_CALL_MY_DOCTOR",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_CHIPS_LIST": {
     "displayName": "RXC_CHIPS_LIST",
+    "layout": ["stepSection"],
+    "availableAttributes": ["*", "warrantyOptions"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "https...",
+    "modalImage": "https...",
+    "configurable": true,
     "props": {
       "attribute": {
         "required": true,
@@ -87,11 +105,34 @@
       "description": {
         "required": false,
         "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
       }
     }
   },
   "RXC_COLOR_PICKER": {
     "displayName": "RXC_COLOR_PICKER",
+    "layout": ["stepSection"],
+    "availableAattributes": ["color"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
     "props": {
       "title": {
         "required": false,
@@ -104,15 +145,38 @@
       "attribute": {
         "required": true,
         "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
       }
     }
   },
   "RXC_CRASH_POPUP": {
     "displayName": "RXC_CRASH_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_EXIT_POPUP": {
     "displayName": "RXC_EXIT_POPUP",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "exitTitle": {
         "required": true,
@@ -138,6 +202,9 @@
   },
   "RXC_FOOTER": {
     "displayName": "RXC_FOOTER",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "insuranceButtonLabel": {
         "required": true,
@@ -167,6 +234,9 @@
   },
   "RXC_HEAD_NAV": {
     "displayName": "RXC_HEAD_NAV",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "insuranceButtonLabel": {
         "required": true,
@@ -192,10 +262,16 @@
   },
   "RXC_FRAME_IMAGE": {
     "displayName": "RXC_FRAME_IMAGE",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL": {
     "displayName": "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "title": {
         "required": true,
@@ -265,13 +341,14 @@
   },
   "RXC_MANUAL_INPUT_READERS": {
     "displayName": "RXC_MANUAL_INPUT_READERS",
+    "layout": ["stepSection"],
     "props": {}
   },
   "RXC_MANUAL_LIST": {
     "displayName": "RXC_MANUAL_LIST",
     "layout": ["stepSection"],
     "previewImage": "",
-    "modalImage": "https",
+    "modalImage": "",
     "availableKeys": ["MANUAL", "ACCOUNT", "UPLOAD", "CMD", "LATER"],
     "props": {
       "svg": {
@@ -312,14 +389,23 @@
   },
   "RXC_PD_MODAL": {
     "displayName": "RXC_PD_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_PD_OPTY_MODAL": {
     "displayName": "RXC_PD_OPTY_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_PRESCRIPTION_PANEL": {
     "displayName": "RXC_PRESCRIPTION_PANEL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "enablePrism": {
         "required": true,
@@ -749,6 +835,9 @@
   },
   "RXC_PRESCRIPTION_DETAILS_MODAL": {
     "displayName": "RXC_PRESCRIPTION_DETAILS_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "title": {
         "required": true,
@@ -762,6 +851,9 @@
   },
   "RXC_REVIEW_PANEL": {
     "displayName": "RXC_REVIEW_PANEL",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "steps_advancedPrescription_manual_manualPreviewTitle": {
         "required": true,
@@ -817,20 +909,91 @@
       }
     }
   },
+  "RXC_SLIDER": {
+    "displayName": "RXC_SLIDER",
+    "layout": ["stepSection"],
+    "availableAattributes": ["*", "warrantyOptions"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
+    "props": {
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "type": "string"
+      },
+      "description": {
+        "required": false,
+        "type": "string"
+      },
+      "showInfoIcon": {
+        "required": false,
+        "type": "boolean"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
+      }
+    }
+  },
   "RXC_SWATCH_LIST": {
     "displayName": "RXC_SWATCH_LIST",
+    "layout": ["stepSection"],
+    "availableAattributes": ["color, frameColor"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
     "props": {
       "price": {
         "required": true,
         "type": "boolean"
+      },
+      "attribute": {
+        "required": true,
+        "type": "string"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
       }
     }
   },
   "RXC_TITLE_DESCRIPTION": {
     "displayName": "RXC_TITLE_DESCRIPTION",
-    "layout": ["stepSection", "previewSection"],
+    "layout": ["stepSection"],
     "previewImage": "",
-    "modalImage": "https",
+    "modalImage": "",
     "props": {
       "id": {
         "required": true,
@@ -865,14 +1028,14 @@
     }
   },
   "RXC_TOGGLE": {
-    "availableAattributes": ["brand", "type"],
     "displayName": "RXC_TOGGLE",
+    "layout": ["stepSection"],
+    "availableAattributes": ["polar"],
+    "nestedViewModes": ["inside", "outside"],
+    "previewImage": "",
+    "modalImage": "",
+    "configurable": true,
     "props": {
-      "nestedComponents": {
-        "required": false,
-        "type": "Array",
-        "elements": "ReactReactElement"
-      },
       "attribute": {
         "required": true,
         "type": "string"
@@ -888,15 +1051,38 @@
       "showInfoIcon": {
         "required": false,
         "type": "boolean"
+      },
+      "valueDependency": {
+        "required": false,
+        "type": "string"
+      },
+      "viewMode": {
+        "required": false,
+        "type": "string"
+      },
+      "nestedViewMode": {
+        "required": false,
+        "type": "string",
+        "default": "outside"
+      },
+      "nestedComponents": {
+        "required": false,
+        "type": "Array"
       }
     }
   },
   "RXC_UPLOAD_PRESCRIPTION": {
     "displayName": "RXC_UPLOAD_PRESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {}
   },
   "RXC_USE_SAVED_PRESCRIPTION": {
     "displayName": "RXC_USE_SAVED_PRESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "title": {
         "required": true,
@@ -942,6 +1128,9 @@
   },
   "RXC_YOUR_SELECTIONS": {
     "displayName": "RXC_YOUR_SELECTIONS",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
     "props": {
       "position": {
         "required": true,
