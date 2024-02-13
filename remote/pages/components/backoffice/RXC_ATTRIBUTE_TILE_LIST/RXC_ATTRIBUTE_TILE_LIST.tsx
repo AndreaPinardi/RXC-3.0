@@ -1,4 +1,6 @@
+import useAttributeTileList from "@/hooks/useAttributeTileList";
 import React, { FC } from "react";
+import Card from "../../layout/Card";
 
 interface RXC_ATTRIBUTE_TILE_LIST_TYPE {
   svg?: boolean;
@@ -14,8 +16,18 @@ interface RXC_ATTRIBUTE_TILE_LIST_TYPE {
 
 const RXC_ATTRIBUTE_TILE_LIST: FC<RXC_ATTRIBUTE_TILE_LIST_TYPE> = ({
   nestedViewMode = "inside",
+  attribute,
 }) => {
-  return <div>RXC_ATTRIBUTE_TILE_LIST</div>;
+  const { options, onSelect } = useAttributeTileList(attribute);
+  return (
+    <div>
+      {options.map((tile) => (
+        <Card key={tile.id} onClick={() => onSelect(tile.id)}>
+          {tile.title}
+        </Card>
+      ))}
+    </div>
+  );
 };
 
 export default RXC_ATTRIBUTE_TILE_LIST;

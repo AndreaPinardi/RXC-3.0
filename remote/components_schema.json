@@ -1099,58 +1099,6 @@
         "required": false,
         "type": "string",
         "default": "\"Prescription name\""
-      },
-      "manualPreviewTitle": {
-        "required": false,
-        "default": "\"Your prescription details\""
-      },
-      "seeDetails_sphere": {
-        "required": false,
-        "default": "\"SPH\""
-      },
-      "seeDetails_cylinder": {
-        "required": false,
-        "default": "\"CYL\""
-      },
-      "seeDetails_axis": {
-        "required": false,
-        "default": "\"Axis\""
-      },
-      "seeDetails_add": {
-        "required": false,
-        "default": "\"ADD\""
-      },
-      "seeDetails_pd": {
-        "required": false,
-        "default": "\"PD\""
-      },
-      "seeDetails_od": {
-        "required": false,
-        "default": "\"OD\""
-      },
-      "seeDetails_right": {
-        "required": false,
-        "default": "\"Right\""
-      },
-      "seeDetails_left": {
-        "required": false,
-        "default": "\"Left\""
-      },
-      "seeDetails_os": {
-        "required": false,
-        "default": "\"OS\""
-      },
-      "seeDetails_vertical": {
-        "required": false,
-        "default": "\"Vertical Prism (Δ)\""
-      },
-      "seeDetails_baseDirection": {
-        "required": false,
-        "default": "\"Base Direction\""
-      },
-      "seeDetails_horizontal": {
-        "required": false,
-        "default": "\"Horizontal Prism (Δ)\""
       }
     }
   },
@@ -1163,14 +1111,74 @@
     "modalImage": "",
     "props": {
       "title": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Your prescription details\""
       },
       "edit": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"Edit prescription\""
+      },
+      "sphere": {
+        "required": false,
+        "default": "\"SPH\"",
+        "type": "string"
+      },
+      "cylinder": {
+        "required": false,
+        "default": "\"CYL\"",
+        "type": "string"
+      },
+      "axis": {
+        "required": false,
+        "default": "\"Axis\"",
+        "type": "string"
+      },
+      "add": {
+        "required": false,
+        "default": "\"ADD\"",
+        "type": "string"
+      },
+      "pd": {
+        "required": false,
+        "default": "\"PD\"",
+        "type": "string"
+      },
+      "od": {
+        "required": false,
+        "default": "\"OD\"",
+        "type": "string"
+      },
+      "right": {
+        "required": false,
+        "default": "\"Right\"",
+        "type": "string"
+      },
+      "left": {
+        "required": false,
+        "default": "\"Left\"",
+        "type": "string"
+      },
+      "os": {
+        "required": false,
+        "default": "\"OS\"",
+        "type": "string"
+      },
+      "vertical": {
+        "required": false,
+        "default": "\"Vertical Prism (Δ)\"",
+        "type": "string"
+      },
+      "baseDirection": {
+        "required": false,
+        "default": "\"Base Direction\"",
+        "type": "string"
+      },
+      "horizontal": {
+        "required": false,
+        "default": "\"Horizontal Prism (Δ)\"",
+        "type": "string"
       }
     }
   },
@@ -1184,68 +1192,220 @@
     "props": {
       "steps_advancedPrescription_manual_manualPreviewTitle": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_sphere": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_cylinder": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_axis": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_add": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_pd": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_od": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_right": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_left": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_os": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_vertical": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_baseDirection": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
       },
       "steps_advancedPrescription_manual_seeDetails_horizontal": {
         "required": true,
-        "type": "string",
-        "default": null
+        "type": "string"
+      },
+      "advancedPrescription_confirmedTitle": {
+        "required": false,
+        "default": "\"Prescription\"",
+        "type": "string"
+      },
+      "type_confirmedTitle": {
+        "required": false,
+        "default": "\"Vision need:\"",
+        "type": "string"
+      },
+      "brand_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens brand:\"",
+        "type": "string"
+      },
+      "lensBundle_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens bundle:\"",
+        "type": "string"
+      },
+      "treatmentsFamily_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens type:\"",
+        "type": "string"
+      },
+      "gvpTreatment_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens Package:\"",
+        "type": "string"
+      },
+      "thickness_confirmedTitle": {
+        "required": false,
+        "default": "\"Thickness:\"",
+        "type": "string"
+      },
+      "designType_confirmedTitle": {
+        "required": false,
+        "default": "\"Design Type:\"",
+        "type": "string"
+      },
+      "treatments_confirmedTitle": {
+        "required": false,
+        "default": "\"Treatment:\"",
+        "type": "string"
+      },
+      "lensColor_confirmedTitle": {
+        "required": false,
+        "default": "\"Color:\"",
+        "type": "string"
+      },
+      "color_confirmedTitle": {
+        "required": false,
+        "default": "\"Color:\"",
+        "type": "string"
+      },
+      "addOns_confirmedTitle": {
+        "required": false,
+        "default": "\"Finishings:\"",
+        "type": "string"
+      },
+      "alreadyIncluded_confirmedTitle": {
+        "required": false,
+        "default": "\"Already Included:\"",
+        "type": "string"
+      },
+      "protectionplan_confirmedTitle": {
+        "required": false,
+        "default": "\"Protection plan\"",
+        "type": "string"
+      },
+      "title": {
+        "required": false,
+        "default": "\"Review your selections\"",
+        "type": "string"
+      },
+      "discountTitle": {
+        "required": false,
+        "default": "\"40% off prescription lenses is automatically applied\"",
+        "type": "string"
+      },
+      "firstLineReview": {
+        "required": false,
+        "default": "\"Frame:\"",
+        "type": "string"
+      },
+      "lensRecapTitle": {
+        "required": false,
+        "default": "\"Lenses:\"",
+        "type": "string"
+      },
+      "insuranceButtonLabel": {
+        "required": false,
+        "default": "\"Add insurance benefits\"",
+        "type": "string"
+      },
+      "insuranceButtonLabelRemove": {
+        "required": false,
+        "default": "\"Remove insurance benefits\"",
+        "type": "string"
+      },
+      "oneYearCoverageAdd": {
+        "required": false,
+        "default": "\"Add\"",
+        "type": "string"
+      },
+      "seeDetails": {
+        "required": false,
+        "default": "\"See details\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_paypal": {
+        "required": false,
+        "default": "\"With ###PAYMENT_TYPE###, pay in ###INSTALLMENTS### easy payments of just ###MONTHLY_PRICE###\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_title": {
+        "required": false,
+        "default": "\"Shop now. Pay later.\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_subtitle": {
+        "required": false,
+        "default": "\"Select ###PAYMENT_TYPE### as your payment method at checkout \\n to pay in interest-free installments, with no hidden fees.\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_affirm": {
+        "required": false,
+        "default": "\"With ###PAYMENT_TYPE###, pay in ###INSTALLMENTS### interest-free payments of just ###MONTHLY_PRICE###\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_afterpay": {
+        "required": false,
+        "default": "\"With ###PAYMENT_TYPE###, make ###INSTALLMENTS### interest-free payments, every two weeks.\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_klarna": {
+        "required": false,
+        "default": "\"With ###PAYMENT_TYPE###, pay in ###INSTALLMENTS### interest-free payments of just ###MONTHLY_PRICE###\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_terms": {
+        "required": false,
+        "default": "\"You must be over 18, a resident of the U.S., and meet additional eligibility criteria to qualify. Late fees may apply. \\n <a href='#' style= 'color:rgba(87, 93, 155, 1); font-weight: 600; letter-spacing:0.16px'>Click here</a> for complete terms. Loans to California residents made or arranged are pursuant to a California Finance Lenders Law\"",
+        "type": "string"
+      },
+      "paymentInstallments_modal_learnMore": {
+        "required": false,
+        "default": "\"Learn more\"",
+        "type": "string"
+      },
+      "paymentInstallments_installmentsLabel": {
+        "required": false,
+        "default": "\"Pay over time in interest-free installments with ###PAYMENT_TYPE###\"",
+        "type": "string"
+      },
+      "subtitle": {
+        "required": false,
+        "default": "\"Your glasses will come with best in class Ray-Ban technology.\"",
+        "type": "string"
+      },
+      "tooltip": {
+        "required": false,
+        "default": "\"Ensure your eyewear with an extended warranty for unlimited repair and replacement at any LensCrafters store.\"",
+        "type": "string"
       }
     }
   },
@@ -1541,9 +1701,94 @@
     "modalImage": "",
     "props": {
       "position": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "default": null
+        "default": "\"top-right\""
+      },
+      "yourSelections": {
+        "required": false,
+        "default": "\"Your selections\"",
+        "type": "string"
+      },
+      "editButton": {
+        "required": false,
+        "default": "\"Edit\"",
+        "type": "string"
+      },
+      "advancedPrescription_confirmedTitle": {
+        "required": false,
+        "default": "\"Prescription\"",
+        "type": "string"
+      },
+      "type_confirmedTitle": {
+        "required": false,
+        "default": "\"Vision need:\"",
+        "type": "string"
+      },
+      "brand_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens brand:\"",
+        "type": "string"
+      },
+      "lensBundle_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens bundle:\"",
+        "type": "string"
+      },
+      "treatmentsFamily_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens type:\"",
+        "type": "string"
+      },
+      "gvpTreatment_confirmedTitle": {
+        "required": false,
+        "default": "\"Lens Package:\"",
+        "type": "string"
+      },
+      "thickness_confirmedTitle": {
+        "required": false,
+        "default": "\"Thickness:\"",
+        "type": "string"
+      },
+      "designType_confirmedTitle": {
+        "required": false,
+        "default": "\"Design Type:\"",
+        "type": "string"
+      },
+      "treatments_confirmedTitle": {
+        "required": false,
+        "default": "\"Treatment:\"",
+        "type": "string"
+      },
+      "lensColor_confirmedTitle": {
+        "required": false,
+        "default": "\"Color:\"",
+        "type": "string"
+      },
+      "color_confirmedTitle": {
+        "required": false,
+        "default": "\"Color:\"",
+        "type": "string"
+      },
+      "addOns_confirmedTitle": {
+        "required": false,
+        "default": "\"Finishings:\"",
+        "type": "string"
+      },
+      "alreadyIncluded_confirmedTitle": {
+        "required": false,
+        "default": "\"Already Included:\"",
+        "type": "string"
+      },
+      "protectionplan_confirmedTitle": {
+        "required": false,
+        "default": "\"Protection plan\"",
+        "type": "string"
+      },
+      "price_included": {
+        "required": false,
+        "default": "\"Included\"",
+        "type": "string"
       }
     }
   }

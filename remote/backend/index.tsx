@@ -7,6 +7,7 @@ import Step from "../pages/step";
 import { useDispatch, useSelector } from "react-redux";
 import { workflowActions } from "@/redux/slices/workflow";
 import useBackend from "@/hooks/useBackend";
+import { configActions } from "@/redux/slices/config";
 
 const Backend = ({ config }) => {
   //const configFromBackend = useBackend(config);
@@ -26,6 +27,12 @@ const Backend = ({ config }) => {
       dispatch(workflowActions.setSteps(backofficeConfig.stepSection.steps));
     }
   }, [backofficeConfig, dispatch]);
+
+  useEffect(() => {
+    if (config?.lensesData?.content) {
+      dispatch(configActions.setConfigContent(config?.lensesData?.content));
+    }
+  }, [config, dispatch]);
 
   if (isLoading || isError) return null;
 
